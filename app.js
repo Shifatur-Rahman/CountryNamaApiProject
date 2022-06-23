@@ -16,7 +16,6 @@ function displayData(data) {
     <h4> Country Name: ${singleData.name.common} </h4>
     <h4> Population: ${singleData.population}  </h4>
     <h4> Flag :<img src="${singleData.flags.svg}" /> </h4>
-    <h4>  </h4>
     `;
 
     // para.src = singleData.flags[1];
