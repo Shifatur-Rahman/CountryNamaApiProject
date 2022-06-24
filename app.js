@@ -6,9 +6,6 @@ function user() {
 user();
 
 let box = document.getElementById("box");
-let inputText = document.getElementById("inputText");
-let submit = document.getElementById("submit");
-submit.addEventListener("click", displayData);
 
 function displayData(data) {
   for (let singleData of data) {
@@ -21,6 +18,4 @@ function displayData(data) {
             `;
     box.appendChild(para);
   }
-  // console.log(inputText.value);
-  inputText.value = "";
 }
