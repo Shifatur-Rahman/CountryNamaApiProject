@@ -6,23 +6,21 @@ function user() {
 user();
 
 let box = document.getElementById("box");
+let inputText = document.getElementById("inputText");
+let submit = document.getElementById("submit");
+submit.addEventListener("click", displayData);
 
 function displayData(data) {
   for (let singleData of data) {
     let para = document.createElement("li");
     para.classList.add("text");
     para.innerHTML = `
-
-    <h4> Country Name: ${singleData.name.common} </h4>
-    <h4> Population: ${singleData.population}  </h4>
-    <h4> Flag :<img src="${singleData.flags.svg}" /> </h4>
-    `;
-
-    // para.src = singleData.flags[1];
-
+            <p><img src="${singleData.flags.svg}" /> </p>
+            <h4> Country Name: ${singleData.name.common} </h4>
+            <h4> Population: ${singleData.population}  </h4>
+            `;
     box.appendChild(para);
-    // console.log(singleData.name.common);
   }
+  // console.log(inputText.value);
+  inputText.value = "";
 }
-
-displayData();
